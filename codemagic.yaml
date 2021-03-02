@@ -44,7 +44,8 @@ workflows:
         recipients:
           - mark@nevercode.io
       scripts:
-        - #!/usr/bin/env bash
+        - |
+          #!/usr/bin/env bash
           set -e   # exit on first failed command
           set -x   # print all executed commands to the log
           if [ "$FCI_BUILD_STEP_STATUS" == "success" ]
