@@ -3,7 +3,7 @@
 
 workflows:
   ios:
-    name: iOS
+    name: borgodrog
     max_build_duration: 60
     environment:
       vars:
@@ -22,7 +22,7 @@ workflows:
       - |
         #!/usr/bin/env sh
         set -e # exit on first failed command
-
+        echo "BAM BAM BAM"
         echo $FCI_CLONE_DEPTH
         echo $IOS_FIREBASE_SECRET | base64 --decode > $FCI_BUILD_DIR/ios/Runner/GoogleService-Info.plist
       - find . -name "Podfile" -execdir pod install \;
